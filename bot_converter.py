@@ -3,7 +3,7 @@ import telebot
 from telebot import types
 from PIL import Image
 
-bot = telebot.TeleBot('YOUR API_KEY')
+bot = telebot.TeleBot('7495515912:AAHw0oKwFnhc8V1GgTtRaadqssqOcrsKeYA')
 
 
 @bot.message_handler(commands=['start'])
