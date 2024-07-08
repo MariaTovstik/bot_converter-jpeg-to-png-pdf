@@ -48,7 +48,7 @@ def handle_callback_query(call):
             png_bio.seek(0)
             bot.send_document(call.message.chat.id, png_bio, visible_file_name=f'converted_image.png')
         elif call.data == "pdf":
-            # Конвертация в PDF
+            # Конвертацiя в PDF
             pdf_bio = io.BytesIO()
             img.save(pdf_bio, format='PDF', resolution=100)
             pdf_bio.seek(0)
