@@ -42,7 +42,7 @@ def handle_callback_query(call):
     try:
         img = chats_data.get(call.message.chat.id, {}).get('img')
         if call.data == "png":
-            # Конвертация в PNG
+            # Конвертацiя в PNG
             png_bio = io.BytesIO()
             img.save(png_bio, format='PNG')
             png_bio.seek(0)
@@ -54,7 +54,7 @@ def handle_callback_query(call):
             pdf_bio.seek(0)
             bot.send_document(call.message.chat.id, pdf_bio, visible_file_name=f'converted_image.pdf')
 
-        bot.answer_callback_query(call.id, "Виконано!")
+        # bot.answer_callback_query(call.id, "Виконано!")
     except Exception as e:
         print(e)
         bot.send_message(call.message.chat.id, 'Виникла помилка при обробці файлу.')
