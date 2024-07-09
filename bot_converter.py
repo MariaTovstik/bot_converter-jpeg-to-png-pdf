@@ -2,8 +2,9 @@ import io
 import telebot
 from PIL import Image
 from telebot import types
+from setup import API_KEY
 
-bot = telebot.TeleBot('YOUR API-KEY')
+bot = telebot.TeleBot(API_KEY)
 chats_data = {}
 
 
